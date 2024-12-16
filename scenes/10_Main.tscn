@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4erxllqh8yyo"]
+[gd_scene load_steps=3 format=3 uid="uid://p2s3wpch6cgf"]
 
-[ext_resource type="Texture2D" uid="uid://enpcp44e4t7w" path="res://icon.svg" id="1_170e3"]
+[ext_resource type="Script" path="res://Prefabs/Menus/Scripts/MainMenu.cs" id="1_tvi4a"]
+[ext_resource type="PackedScene" uid="uid://damoa1si6ve1e" path="res://Prefabs/Menus/SaveLoadDeleteMenu_PFB.tscn" id="2_aq8ns"]
 
-[node name="Node2D" type="Node2D"]
+[node name="10_Main" type="Node2D" node_paths=PackedStringArray("saveLoadDelete")]
+script = ExtResource("1_tvi4a")
+saveLoadDelete = NodePath("SaveLoadQuitMenu")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(236, 139)
-texture = ExtResource("1_170e3")
+[node name="SaveLoadQuitMenu" parent="." instance=ExtResource("2_aq8ns")]
